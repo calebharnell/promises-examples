@@ -81,3 +81,21 @@ const Book = require('./models/book')
 // }
 //
 // readBook();
+
+// UPDATE
+
+// async function updateBook() {
+//   const book = await Book.findByIdAndUpdate('5a24bf975d238815921b71f7', { $set: { author: 'Georgie Orwell' }}, { new: true });
+//   console.log(book);
+// }
+//
+// updateBook();
+
+// DELETE
+
+// async function deleteBook() {
+//   const book = await Book.findByIdAndRemove('5a24bf975d238815921b71f7');
+//   console.log(book);
+// }
+//
+// deleteBook();
