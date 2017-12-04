@@ -1,4 +1,7 @@
 const { mongoose, db } = require('../database');
-Book = db.model('Book', {title: String, author: String});
+const Schema = mongoose.Schema,
+    ObjectId = Schema.ObjectId;
+    
+Book = db.model('Book', {title: String, author: { type: Schema.Types.ObjectId, ref: 'Author' },});
 
 module.exports = Book;

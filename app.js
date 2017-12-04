@@ -1,4 +1,5 @@
 const Book = require('./models/book')
+const Author = require('./models/author')
 
 // CRUD using CALLBACKS
 
@@ -11,7 +12,6 @@ const Book = require('./models/book')
 //     return;
 //   }
 // }
-
 
 // READ
 
@@ -99,3 +99,33 @@ const Book = require('./models/book')
 // }
 //
 // deleteBook();
+
+// CALLBACKS - Create relationship
+
+// Author.create(({name: "George Orwell"}), (error, response) => {
+//   if (error) {
+//     console.log(error);
+//     return;
+//   }
+//   console.log(response);
+//   Book.create({title: "Animal Farm", author: response._id}, (error, response) => {
+//     if (error) {
+//       console.log(error);
+//       return;
+//     } else {
+//       console.log(response);
+//     }
+//   })
+// })
+
+// FIND and POPULATE
+
+// Book.find().populate('author').
+//   exec(function (error, response) {
+//     if (error) {
+//       console.log(error)
+//     } else {
+//       console.log(response)
+//       console.log(response[0].author.name)
+//     }
+//   });
