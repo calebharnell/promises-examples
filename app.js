@@ -129,3 +129,17 @@ const Author = require('./models/author')
 //       console.log(response[0].author.name)
 //     }
 //   });
+
+// PROMISES - Create relationship
+
+// Author.create({name: 'George Orwell'}).then((author) => {
+//   Book.create({title: 'Animal Farm', author: author._id}).then((book) => {
+//     console.log(book);
+//   })
+// })
+
+// Book.find().populate('author').then((books) => {
+//   console.log(books);
+// }).catch((error) => {
+//   console.log(error)
+// });
